@@ -1,0 +1,75 @@
+.dialog-container {
+  padding: 20px;
+  max-width: 1000px; /* הרחבת הרוחב */
+  max-height: 90vh; /* קביעת גובה הדיאלוג עד ל-90% מגובה החלון */
+  overflow-y: auto; /* הוספת גלילה אנכית אם התוכן חורג מהגובה המוגדר */
+  margin: auto;
+  border-radius: 8px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form-group {
+  margin-bottom: 60px; /* הגדלת המרווח בין קבוצות השדות */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 25px; /* הגדלת הריווח הפנימי */
+  box-sizing: border-box;
+  font-size: 15px; /* הגדלת גודל הפונט */
+  background-color:whitesmoke;
+}
+
+.error-messages {
+  color: red;
+  font-size: 0.9em;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px; /* הגדלת המרווח מעל הכפתורים */
+}
+
+.btn-submit {
+  background-color: white;
+  color: #4CAF50;
+  border: black,solid,0.1px,;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.btn-submit:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* .btn-submit:hover:enabled {
+  background-color: #45a049;
+} */
+
+.btn-cancel {
+  background-color:white;
+  color:  #f44336;
+  border: black,solid,0.1px,;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* .btn-cancel:hover {
+  background-color: #e53935;
+} */

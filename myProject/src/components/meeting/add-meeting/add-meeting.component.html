@@ -1,0 +1,50 @@
+<div class="container">
+  <form [formGroup]="addForm" class="customer-form">
+    <div class="form-group">
+      <label for="meetingDate">Meeting Date:</label>
+      <input type="date" id="meetingDate" formControlName="meetingDate" class="form-control">
+      <div *ngIf="addForm.controls['meetingDate'].errors" class="error-messages">
+        <p *ngIf="addForm.controls['meetingDate'].errors['required']">Field is required</p>
+        <p *ngIf="addForm.controls['meetingDate'].errors['maxlength']">Maximum length is 5</p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="meetingHour">Meeting Hour:</label>
+      <input type="number" id="meetingHour" formControlName="meetingHour" class="form-control">
+      <div *ngIf="addForm.controls['meetingHour'].errors" class="error-messages">
+        <p *ngIf="addForm.controls['meetingHour'].errors['required']">Field is required</p>
+        <p *ngIf="addForm.controls['meetingHour'].errors['pattern']">Case number must contain only digits</p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="meetingDuration">Meeting Duration:</label>
+      <input type="number" id="meetingDuration" formControlName="meetingDuration" class="form-control">
+      <div *ngIf="addForm.controls['meetingDuration'].errors" class="error-messages">
+        <p *ngIf="addForm.controls['meetingDuration'].errors['required']">Field is required</p>
+        <p *ngIf="addForm.controls['meetingDuration'].errors['pattern']">Case number must contain only digits</p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="cpaId">CPA ID:</label>
+      <input type="number" id="cpaId" formControlName="cpaId" class="form-control">
+      <div *ngIf="addForm.controls['cpaId'].errors" class="error-messages">
+        <p *ngIf="addForm.controls['cpaId'].errors['required']">Field is required</p>
+        <p *ngIf="addForm.controls['cpaId'].errors['pattern']">Case number must contain only digits</p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="customerId">Customer ID:</label>
+      <input type="number" id="customerId" formControlName="customerId" class="form-control">
+      <div *ngIf="addForm.controls['customerId'].errors" class="error-messages">
+        <p *ngIf="addForm.controls['customerId'].errors['required']">Field is required</p>
+        <p *ngIf="addForm.controls['customerId'].errors['pattern']">Case number must contain only digits</p>
+      </div>
+    </div>
+    
+    <button (click)="save()" class="submit-button">Save</button>
+  </form>
+</div>

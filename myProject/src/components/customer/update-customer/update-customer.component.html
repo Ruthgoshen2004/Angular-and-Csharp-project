@@ -1,0 +1,25 @@
+<div class="dialog-container">
+  <form [formGroup]="updateCustomerForm" class="form-container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" class="form-control">
+      <div *ngIf="updateCustomerForm.controls['name'].errors && (updateCustomerForm.controls['name'].touched || updateCustomerForm.controls['name'].dirty)" class="error-messages">
+        <p *ngIf="updateCustomerForm.controls['name'].errors['required']">Field is required</p>
+        <p *ngIf="updateCustomerForm.controls['name'].errors['minlength']">Minimum length is 2</p>
+        <p *ngIf="updateCustomerForm.controls['name'].errors['pattern']">Name must contain only letters</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="caseNumber">Case Number:</label>
+      <input type="text" id="caseNumber" formControlName="caseNumber" class="form-control">
+      <div *ngIf="updateCustomerForm.controls['caseNumber'].errors && (updateCustomerForm.controls['caseNumber'].touched || updateCustomerForm.controls['caseNumber'].dirty)" class="error-messages">
+        <p *ngIf="updateCustomerForm.controls['caseNumber'].errors['required']">Field is required</p>
+        <p *ngIf="updateCustomerForm.controls['caseNumber'].errors['pattern']">Case number must contain only digits</p>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn-submit" [disabled]="updateCustomerForm.invalid" (click)="editCustomer()">Submit</button>
+      <button type="button" class="btn-cancel" (click)="close()">Cancel</button>
+    </div>
+  </form>
+</div>

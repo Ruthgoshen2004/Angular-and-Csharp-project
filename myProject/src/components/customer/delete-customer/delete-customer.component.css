@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    font-family: 'Arial', sans-serif; /* אפשר להחליף לגופן מעניין יותר במידת הצורך */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box {
+    width: 700px;
+    height: 450px;
+    background-image: url('../../../assets/deletePic.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.text {
+    font-size: 30px;
+    font-weight: bold;
+    /* font-family: 'Courier New', Courier, monospace; אפשר להחליף לגופן מעניין יותר במידת הצורך */
+    color: #333;
+}

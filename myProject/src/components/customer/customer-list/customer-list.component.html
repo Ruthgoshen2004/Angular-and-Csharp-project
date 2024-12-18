@@ -1,0 +1,51 @@
+<div class="background-container">
+  <div class="customer-list">
+    <h2 appMyDirective>Customer List</h2>
+    
+    <!-- חיפוש לפי שם הלקוח -->
+    <div class="search-container">
+      <mat-icon>search</mat-icon>
+      <input type="text" placeholder="Search by Name" [(ngModel)]="searchTerm" (ngModelChange)="applyFilter()">
+    </div>
+
+    <button mat-icon-button color="primary" (click)="navigateToAddCustomer()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <table mat-table [dataSource]="filteredCustomers" class="mat-elevation-z8">
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let customer"> {{customer.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let customer"> {{customer.name}} </td>
+      </ng-container>
+
+      <!-- Case Number Column -->
+      <ng-container matColumnDef="caseNumber">
+        <th mat-header-cell *matHeaderCellDef> Case Number </th>
+        <td mat-cell *matCellDef="let customer"> {{customer.caseNumber}} </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let customer">
+          <button mat-icon-button color="primary" (click)="editCustomer(customer.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="navigateToDeleteCustomer(customer.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

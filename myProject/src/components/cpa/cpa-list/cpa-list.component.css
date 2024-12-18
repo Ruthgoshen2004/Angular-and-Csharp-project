@@ -1,0 +1,55 @@
+.cpa-list-container {
+  position: relative;
+  width: 100%;
+  height: 85vh; /* גובה מלא של המסך */
+  background-image: url('../../../assets/pic2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cpa-list {
+  width: 90%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* שקיפות עם צבע רקע */
+  border-radius: 10px; /* פינות מעוגלות */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צללה קלה */
+  max-width: 1000px; /* מגבלה לרוחב מקסימלי */
+  z-index: 2; /* כדי שהטבלה תהיה מעל הרקע */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.2); /* טבלה עם רקע שקוף */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* צללת שוליים קלה */
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* קו תחתון שקוף */
+  color: #333; /* צבע טקסט */
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.1); /* רקע כותרת שקוף */
+  font-weight: bold;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.05); /* רקע תאים שקוף */
+}
+
+button {
+  margin: 0 5px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,44 @@
+<div class="cpa-list-container">
+  <div class="cpa-list">
+    <h2 appMyDirective>Cpa List</h2>
+    <button mat-icon-button color="primary" (click)="navigateToAddCpa()">
+      <mat-icon>add</mat-icon>
+    </button>
+    <table mat-table [dataSource]="cpaList" class="mat-elevation-z8">
+
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let cpa"> {{cpa.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let cpa"> {{cpa.name}} </td>
+      </ng-container>
+
+      <!-- SeniorityYears Column -->
+      <ng-container matColumnDef="seniorityYears">
+        <th mat-header-cell *matHeaderCellDef> Seniority Years </th>
+        <td mat-cell *matCellDef="let cpa"> {{cpa.seniorityYears}} </td>
+      </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let cpa">
+          <button mat-icon-button color="primary" (click)="editCpa(cpa.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteCpa(cpa.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

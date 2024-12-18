@@ -1,0 +1,19 @@
+<form [formGroup]="formLogin">
+    <div>
+      <label for="password">password:</label>
+      <input type="password" id="password" formControlName="password" >
+      <div *ngIf="formLogin.get('password')?.invalid && formLogin.get('password')?.dirty" >
+        <p>This field is required.</p>
+      </div>
+    </div>
+    <div>
+      <label for="username">user :</label>
+      <input type="text" id="username" formControlName="username" >
+      <div *ngIf="formLogin.get('username')?.invalid && formLogin.get('username')?.dirty">
+        <p>This field must be a maximum of 5 characters.</p>
+      </div>
+    </div>
+    
+    <!-- [disabled]="formLogin.invalid"  -->
+    <button type="submit" (click)="onSubmit()" >התחבר</button>
+  </form >

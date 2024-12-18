@@ -1,0 +1,53 @@
+<div class="dialog-container">
+    <form [formGroup]="updateMeetingForm" class="form-container">
+      <div class="form-group">
+        <label for="meetingDate">meetingDate:</label>
+        <input type="date" id="meetingDate" formControlName="meetingDate" class="form-control">
+        <div *ngIf="updateMeetingForm.controls['meetingDate'].errors && (updateMeetingForm.controls['meetingDate'].touched || updateMeetingForm.controls['meetingDate'].dirty)" class="error-messages">
+          <p *ngIf="updateMeetingForm.controls['meetingDate'].errors['required']">Field is required</p>
+          <!-- <p *ngIf="updateMeetingForm.controls['meetingDate'].errors['minlength']">Minimum length is 2</p>
+          <p *ngIf="updateMeetingForm.controls['meetingDate'].errors['pattern']">Name must contain only letters</p> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="meetingHour">meetingHour:</label>
+        <input type="number" id="meetingHour" formControlName="meetingHour" class="form-control">
+        <div *ngIf="updateMeetingForm.controls['meetingHour'].errors && (updateMeetingForm.controls['meetingHour'].touched || updateMeetingForm.controls['meetingHour'].dirty)" class="error-messages">
+          <p *ngIf="updateMeetingForm.controls['meetingHour'].errors['required']">Field is required</p>
+          <p *ngIf="updateMeetingForm.controls['meetingHour'].errors['pattern']">meetingHour must contain only digits</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="meetingDuration">meetingDuration:</label>
+        <input type="number" id="meetingDuration" formControlName="meetingDuration" class="form-control">
+        <div *ngIf="updateMeetingForm.controls['meetingDuration'].errors && (updateMeetingForm.controls['meetingDuration'].touched || updateMeetingForm.controls['meetingDuration'].dirty)" class="error-messages">
+          <p *ngIf="updateMeetingForm.controls['meetingDuration'].errors['required']">Field is required</p>
+          <p *ngIf="updateMeetingForm.controls['meetingDuration'].errors['pattern']">meetingDuration must contain only digits</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="cpaId">cpaId:</label>
+        <input type="number" id="cpaId" formControlName="cpaId" class="form-control">
+        <div *ngIf="updateMeetingForm.controls['cpaId'].errors && (updateMeetingForm.controls['cpaId'].touched || updateMeetingForm.controls['cpaId'].dirty)" class="error-messages">
+          <p *ngIf="updateMeetingForm.controls['cpaId'].errors['required']">Field is required</p>
+          <p *ngIf="updateMeetingForm.controls['cpaId'].errors['pattern']">Cpa id must contain only digits</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="customerId">customerId:</label>
+        <input type="number" id="customerId" formControlName="customerId" class="form-control">
+        <div *ngIf="updateMeetingForm.controls['customerId'].errors && (updateMeetingForm.controls['customerId'].touched || updateMeetingForm.controls['customerId'].dirty)" class="error-messages">
+          <p *ngIf="updateMeetingForm.controls['customerId'].errors['required']">Field is required</p>
+          <p *ngIf="updateMeetingForm.controls['customerId'].errors['pattern']">customerId must contain only digits</p>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-submit" [disabled]="updateMeetingForm.invalid" (click)="editMeeting()">Submit</button>
+        <button type="button" class="btn-cancel" (click)="close()">Cancel</button>
+      </div>
+    </form>
+  </div>
+

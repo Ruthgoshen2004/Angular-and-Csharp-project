@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.full-screen-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/pic3.jpg'); /* שים לב לנתיב הנכון */
+    background-size: cover; /* התמונה תכסה את כל המסך */
+    background-position: center; /* התמונה תהיה ממורכזת */
+    background-repeat: no-repeat; /* התמונה לא תחזור על עצמה */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 5em; /* גודל טקסט גדול מאוד */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* צל קל לטקסט */
+    z-index: 1; /* מבטיח שהטקסט יופיע מעל הרקע */
+}

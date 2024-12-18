@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f0; /* צבע רקע בהיר */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .customer-form {
+    max-width: 800px; /* הגדלת הרוחב המרבי של הטופס */
+    width: 100%;
+    padding: 30px; /* הגדלת המרווח סביב הטופס */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff; /* צבע רקע לבן */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 25px; /* הגדלת המרווח בין השדות */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px; /* הגדלת המרווח מתחת לתוויות */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px; /* הגדלת ריפוד שדות הקלט */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  .error-messages {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px; /* הגדלת ריפוד כפתור השמירה */
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* הגדלת גודל כפתור */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: gray;
+  }
+  
