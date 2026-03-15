@@ -11,7 +11,6 @@
 
 ## צד לקוח (Frontend):  
 - פיתוח ממשק משתמש מבוסס **Angular** עם שימוש ב-**Material Design** ו-**Bootstrap** לעיצוב מודרני ורספונסיבי.  
-- תמיכה ב-**Server-Side Rendering (SSR)** לשיפור SEO וביצועים.  
 - יישום **SPA (Single Page Application)** לניהול אינטראקטיבי של נתונים בזמן אמת.  
 - שימוש בשירותי **HTTP Services** לתקשורת עם ה-API של צד השרת.  
 - הגדרות מותאמות למצבי **פיתוח (Development)** ו-**פרודקשן (Production)**.  
